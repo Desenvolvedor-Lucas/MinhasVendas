@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinhasVendas.Views.User_Page"
+             Style="{StaticResource BackgoundContent}">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame Style="{StaticResource FrameUserStyle}">
+                <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="FillAndExpand">
+
+                    <StackLayout>
+                        <Image Source="{Binding srcImgUser}"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical" 
+                                 VerticalOptions="CenterAndExpand"  
+                                 HorizontalOptions="FillAndExpand"
+                                 Margin="10,0">
+
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="FillAndExpand">
+
+                            <Label Text="{Binding Company_Name}" 
+                                   Style="{StaticResource LabelUserNameCompanyStyle}"/>
+
+                            <Button x:Name="btn_Edit_User"
+                                    Command="{Binding EditUser}"
+                                    Style="{StaticResource BtnUserEditStyle}"/>
+
+                        </StackLayout>
+
+                        <Label Text="{Binding Company_Description}"
+                               Style="{StaticResource LabelUserDescriptionCompanyStyle}"/>
+
+                    </StackLayout>
+
+
+                </StackLayout>
+            </Frame>
+            
+            <ScrollView>
+                <StackLayout Margin="10">
+
+                    <Frame Style="{StaticResource FrameUserStyle}">
+                        <Button x:Name="btn_Stock_Of_Products"
+                                Command="{Binding StockProducts}"
+                                Style="{StaticResource BtnUserStockResourcesStyle}"/>
+                    </Frame>
+
+                    <Frame Style="{StaticResource FrameUserStyle}">
+                        <Button x:Name="btn_Earnings"
+                                Command="{Binding Earnings}"
+                                Style="{StaticResource BtnUserStockResourcesStyle}"/>
+                    </Frame>
+
+                    <Frame Style="{StaticResource FrameUserStyle}">
+                        <Button x:Name="btn_Customers"
+                                Command="{Binding Customers}"
+                                Style="{StaticResource BtnUserStockResourcesStyle}"/>
+                    </Frame>
+
+                    <Button x:Name="btn_Edit_Theme"
+                            Command="{Binding EditTheme}"
+                            Style="{StaticResource BtnUserEditThemeStyle}"/>
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

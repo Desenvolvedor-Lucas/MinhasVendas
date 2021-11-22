@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinhasVendas.ThemeResources.FireTheme">
+
+    <!--blue-->
+    <Color x:Key="PrimaryColor">#f44100</Color>
+    <!--Dark Green-->
+    <Color x:Key="PrimaryDarkColor">#f44100 </Color>
+    <!--White-->
+    <Color x:Key="PrimaryTintColor">#ffffff</Color>
+
+    <Color x:Key="TabBarBackgroundColor">#c63500</Color>
+
+
+    <!--LightGray-->
+    <Color x:Key="PageBackgroundColor">#141414</Color>
+    <!--White-->
+    <Color x:Key="ContrastPageBackgroundColor">#2E292A</Color>
+
+
+    <!--Blue-->
+    <Color x:Key="NavigationBarColor">#141414</Color>
+    <Color x:Key="NavigationTitleColor">#ff8c00 </Color>
+
+
+    <!--White-->
+    <Color x:Key="PrimaryTextColor">#ffffff</Color>
+
+    <Color x:Key="PrimaryDarkTextColor">#EDEDF7</Color>
+    <!--Gray-->
+    <Color x:Key="SecondaryTextColor">#bdbdbd</Color>
+    <!--red-->
+    <Color x:Key="ContrastTextColor">#eead2d</Color>
+    <!--Money color-->
+    <Color x:Key="MoneyTextColor">#118C4F</Color>
+
+</ResourceDictionary>

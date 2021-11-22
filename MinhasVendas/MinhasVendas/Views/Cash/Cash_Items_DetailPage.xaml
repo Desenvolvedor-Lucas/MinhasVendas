@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinhasVendas.Views.Cash.Cash_Items_DetailPage"
+             Style="{StaticResource BackgoundContent}">
+
+    <ContentPage.Content>
+        <StackLayout Margin="10" VerticalOptions="FillAndExpand">
+
+            <Frame BackgroundColor="{DynamicResource PageBackgroundColor}">
+                <StackLayout>
+                    <Frame BackgroundColor="{DynamicResource ContrastPageBackgroundColor}">
+                        <StackLayout Orientation="Horizontal">
+
+                            <Label x:Name="lbl_Client"
+                                   Style="{StaticResource LabelDetailStyle}"/>
+
+                            <Label Text="{Binding Name.Text}" 
+                                   Style="{StaticResource LabelDetailNameCustomersStyle}"/>
+
+                            <StackLayout Orientation="Horizontal" 
+                                         HorizontalOptions="EndAndExpand">
+
+                                <Label x:Name="lbl_Date"
+                                       Style="{StaticResource LabelDetailStyle}"
+                                       HorizontalOptions="End"/>
+
+                                <Label Text="{Binding Date.Text}" 
+                                       Style="{StaticResource LabelDetailStyle}"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="End"/>
+
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="{DynamicResource ContrastPageBackgroundColor}" Margin="0, 10">
+                        <StackLayout VerticalOptions="StartAndExpand" 
+                                     Padding="0, 10">
+                            
+                            <StackLayout Orientation="Horizontal" 
+                                         VerticalOptions="StartAndExpand" 
+                                         Padding="0,10">
+                                
+                                <Label x:Name="lbl_Shopped"
+                                       Style="{StaticResource LabelDetailStyle}"/>
+                                
+                                <Label Text="{Binding Product.Text}" 
+                                       Style="{StaticResource LabelDetailStyle}"/>
+                                
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" 
+                                         VerticalOptions="StartAndExpand" 
+                                         Padding="0,10">
+                                
+                                <Label x:Name="lbl_Value_Product"
+                                       Style="{StaticResource LabelDetailStyle}"/>
+                                
+                                <Label Text="{Binding Value.Text}" 
+                                       Style="{StaticResource LabelDetailMoneyStyle}"/>
+                                
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" 
+                                         VerticalOptions="StartAndExpand" 
+                                         Padding="0,10">
+                                
+                                <Label x:Name="lbl_Units"
+                                       Style="{StaticResource LabelDetailStyle}"/>
+                                
+                                <Label Text="{Binding Unit.Text}" 
+                                       Style="{StaticResource LabelDetailStyle}"/>
+                                
+                            </StackLayout>
+                            
+                        </StackLayout>
+                    </Frame>
+
+                    <StackLayout Orientation="Horizontal" 
+                                 VerticalOptions="CenterAndExpand" 
+                                 HorizontalOptions="CenterAndExpand">
+                        
+                        <Label x:Name="lbl_Total_Value"
+                               Style="{StaticResource LabelDetailTotalStyle}"/>
+                        
+                        <Label Text="{Binding TotalValue.Text}" 
+                               Style="{StaticResource LabelDetailTotalMoneyStyle}"/>
+                        
+                    </StackLayout>
+                    
+                </StackLayout>
+            </Frame>
+            
+            <StackLayout Orientation="Horizontal" 
+                         VerticalOptions="CenterAndExpand" 
+                         HorizontalOptions="FillAndExpand"
+                         Padding="0,20">
+                
+                <Button x:Name="btn_Exclude"
+                        Command="{Binding Exclude}"
+                        Style="{StaticResource BtnDetailStyle}"/>
+                
+                <Button x:Name="btn_Edit"
+                        Command="{Binding Edit}"
+                        Style="{StaticResource BtnDetailStyle}"/>
+                
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

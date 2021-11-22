@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Translate="clr-namespace:MinhasVendas.ABC_Translate"
+             x:Class="MinhasVendas.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!--NavigationPage-->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource NavigationBarColor}"/>
+                <Setter Property="BarTextColor" Value="{DynamicResource PrimaryTintColor}"/>
+            </Style>
+
+            <!--ContentPage-->
+            <Style x:Key="BackgoundContent" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PageBackgroundColor}"/>
+            </Style>
+
+        <!--Frames-->
+            <!--FrameCash-->
+            <Style x:Key="FrameCashStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{DynamicResource ContrastPageBackgroundColor}"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="Margin" Value="10, 0, 10, 10"/>
+            </Style>
+            <!--FrameSale-->
+            <Style x:Key="FrameSaleStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{DynamicResource ContrastPageBackgroundColor}"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            </Style>
+            <!--FrameUser-->
+            <Style x:Key="FrameUserStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{DynamicResource ContrastPageBackgroundColor}"/>
+            </Style>
+
+            <!--Entrys-->
+            <Style x:Key="EntryItemSale" TargetType="Entry">
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryDarkTextColor}"/>
+                <Setter Property="PlaceholderColor" Value="{DynamicResource SecondaryTextColor}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+
+                <!--Buttons-->
+            <!--Btn Main-->
+            <Style x:Key="BtnMainStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryDarkColor}"/>
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}"/>
+                <Setter Property="TextTransform" Value="None"/>
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="VerticalOptions" Value="End"/>
+            </Style>
+            <!--Btn Detail-->
+            <Style x:Key="BtnDetailStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryDarkColor}"/>
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+            <!--BtnSaleItem-->
+            <Style x:Key="BtnItemSaleStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryDarkColor}"/>
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+            </Style>
+            <!--BtnUserEdit-->
+            <Style x:Key="BtnUserEditStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryDarkColor}"/>
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}"/>
+                <Setter Property="TextTransform" Value="None"/>
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+            </Style>
+            <!--BtnUserStocks-->
+            <Style x:Key="BtnUserStockResourcesStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+                <Setter Property="TextTransform" Value="None"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+            </Style>
+            <!--BtnUserEditTheme-->
+            <Style x:Key="BtnUserEditThemeStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryDarkColor}"/>
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}"/>
+                <Setter Property="TextTransform" Value="None"/>
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="BorderWidth" Value="10"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+            <!--BtnEditTheme-->
+            <Style x:Key="BtnEditThemeStyle" TargetType="Button">
+                <Setter Property="Text" Value="{x:Static Translate:AppResources.Choose_theme}"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryDarkColor}"/>
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}"/>
+                <Setter Property="TextTransform" Value="None"/>
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+            </Style>
+
+            <!--Labels-->
+            <!--Cash-->
+            <Style x:Key="LabelDateStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+            </Style>
+            <Style x:Key="LabelTotalStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+            </Style>
+            <Style x:Key="LabelMoneyStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource MoneyTextColor}"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+            </Style>
+            <Style x:Key="LabelNameCustomerStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource ContrastTextColor}"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <Style x:Key="LabelInformationsStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--Sale-->
+            <Style x:Key="LabelSaleInformationsStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            <Style x:Key="LabelSaleTotalStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style x:Key="LabelSaleTotalMoneyStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource MoneyTextColor}"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <!--Detail-->
+            <Style x:Key="LabelDetailStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+            </Style>
+            <Style x:Key="LabelDetailNameCustomersStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource ContrastTextColor}"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+            </Style>
+            <Style x:Key="LabelDetailMoneyStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource MoneyTextColor}"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+            </Style>
+            <Style x:Key="LabelDetailTotalStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            <Style x:Key="LabelDetailTotalMoneyStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource MoneyTextColor}"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            <!--User-->
+            <Style x:Key="LabelUserNameCompanyStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryDarkTextColor}"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+            </Style>
+            <Style x:Key="LabelUserDescriptionCompanyStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+            </Style>
+            <!--EditTheme-->
+            <Style x:Key="LebalEditThemeStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource ContrastTextColor}"/>
+                <Setter Property="FontSize" Value="Subtitle"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinhasVendas.Views.User.UserEditTheme_Page"
+             Style="{StaticResource BackgoundContent}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+
+                <Frame Style="{StaticResource FrameUserStyle}">
+                    <StackLayout>
+
+                        <Label x:Name="lbl_Default_Theme"
+                               Style="{StaticResource LebalEditThemeStyle}"/>
+
+                        <Button Command="{Binding DefaultTheme}"
+                                Style="{StaticResource BtnEditThemeStyle}"/>
+
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame Style="{StaticResource FrameUserStyle}">
+                    <StackLayout >
+
+                        <Label x:Name="lbl_Lemon_Theme"
+                               Style="{StaticResource LebalEditThemeStyle}"/>
+
+                        <Button Command="{Binding LemonTheme}"
+                                Style="{StaticResource BtnEditThemeStyle}"/>
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame Style="{StaticResource FrameUserStyle}">
+                    <StackLayout >
+
+                        <Label x:Name="lbl_Dark_Theme"
+                               Style="{StaticResource LebalEditThemeStyle}"/>
+
+                        <Button Command="{Binding DarkTheme}"
+                                Style="{StaticResource BtnEditThemeStyle}"/>
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame Style="{StaticResource FrameUserStyle}">
+                    <StackLayout>
+
+                        <Label x:Name="lbl_Aquatic_Theme"
+                               Style="{StaticResource LebalEditThemeStyle}"/>
+
+                        <Button Command="{Binding AquaticTheme}"
+                                Style="{StaticResource BtnEditThemeStyle}"/>
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame Style="{StaticResource FrameUserStyle}">
+                    <StackLayout>
+
+                        <Label x:Name="lbl_Fire_Theme"
+                               Style="{StaticResource LebalEditThemeStyle}"/>
+
+                        <Button Command="{Binding FireTheme}"
+                                Style="{StaticResource BtnEditThemeStyle}"/>
+
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

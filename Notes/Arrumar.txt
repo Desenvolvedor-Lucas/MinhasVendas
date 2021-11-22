@@ -1,0 +1,3 @@
+1-Falta arrrumar ValueEdit pois não atualiza por que ele pega o
+valor do Cash_ViewModel, então por isso o primeiro valor 
+que foi dado no produto nunca muda.

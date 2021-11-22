@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinhasVendas.Views.CompanyResources.Customers.AddCustomers_Page"
+             Style="{x:StaticResource BackgoundContent}">
+    
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Frame Style="{x:StaticResource FrameSaleStyle}" VerticalOptions="CenterAndExpand">
+                <StackLayout Margin="10">
+                    <Label x:Name="lbl_Customer"
+                           Style="{x:StaticResource LabelSaleInformationsStyle}"
+                           HorizontalOptions="Center"/>
+
+                    <Entry x:Name="entry_Name"
+                            Text="{Binding Name}"
+                            Style="{x:StaticResource EntryItemSale}"
+                            HorizontalTextAlignment="Center"/>
+                    
+                    <StackLayout Margin="10">
+                        <Button x:Name="btn_Add_Customer"
+                                Command="{Binding AddCustomer}"
+                                Style="{x:StaticResource BtnMainStyle}"
+                                VerticalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

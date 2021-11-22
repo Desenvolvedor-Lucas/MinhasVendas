@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Translate="clr-namespace:MinhasVendas.ABC_Translate"
+             x:Class="MinhasVendas.Views.CompanyResources.Customers.ChooseClient_Page"
+             Style="{x:StaticResource BackgoundContent}">
+    
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+
+            <StackLayout Margin="10">
+                <Button x:Name="btn_Anonymous"
+                        Command="{Binding Anonymous}"
+                        Style="{x:StaticResource BtnMainStyle}"/>
+            </StackLayout>
+
+            <Frame Style="{x:StaticResource FrameCashStyle}">
+                <StackLayout>
+                    
+                    <ListView ItemsSource="{Binding ChooseCustomersList}"
+                              ItemTapped="ListView_ItemTapped"
+                              SelectionMode="None"
+                              SeparatorVisibility="Default">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                                        <Label Text="{x:Static Translate:AppResources.Customer}"
+                                               TextColor="{StaticResource PrimaryDarkTextColor}"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center"
+                                                Style="{x:StaticResource LabelNameCustomerStyle}"/>
+                                        <Label Text="{Binding CustomerName}"
+                                                TextColor="{StaticResource PrimaryDarkTextColor}"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center"
+                                                Style="{x:StaticResource LabelNameCustomerStyle}"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

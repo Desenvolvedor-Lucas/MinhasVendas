@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Models="clr-namespace:MinhasVendas.Models"
+             x:Class="MinhasVendas.Views.Cash.Sales.Sale_Edit_DetailPage"
+             Style="{StaticResource BackgoundContent}">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label x:Name="lbl_Sale_Information"
+                   Style="{StaticResource LabelSaleInformationsStyle}"/>
+            
+            <Frame Style="{StaticResource FrameSaleStyle}">
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    
+                    <StackLayout Orientation="Horizontal" 
+                                 Margin="2">
+
+                        <Button x:Name="btn_Name"
+                                Command="{Binding EditNameCommand}"
+                               Style="{StaticResource BtnItemSaleStyle}"/>
+                        
+                        <Entry x:Name="entry_Name"
+                               Text="{Binding NameEdit.Text}" 
+                               Style="{StaticResource EntryItemSale}"/>
+                        
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 Margin="5">
+
+                        <Button x:Name="btn_Pruduct"
+                               Style="{StaticResource BtnItemSaleStyle}"/>
+
+                        <Entry x:Name="entry_Product"
+                               Text="{Binding ProductEdit}" 
+                               Style="{StaticResource EntryItemSale}"/>
+
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 Margin="5">
+
+                        <Button x:Name="btn_Value"
+                               Style="{StaticResource BtnItemSaleStyle}"/>
+                        
+                        <Models:CustomEntry x:Name="entry_Value"
+                                            Text="{Binding ValueEdit}"  
+                                            Style="{StaticResource EntryItemSale}"
+                                            IsNumeric="True"/>
+                        
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" 
+                                 Margin="5">
+
+                        <Button x:Name="btn_Unit"
+                               Style="{StaticResource BtnItemSaleStyle}"/>
+                        
+                        <Entry x:Name="entry_Unit"
+                               Text="{Binding UnitEdit}" 
+                               Style="{StaticResource EntryItemSale}"
+                               Keyboard="Numeric"/>
+                        
+                    </StackLayout>
+                    
+                </StackLayout>
+            </Frame>
+
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand">
+
+                <Label x:Name="lbl_Total_Value"
+                       Style="{StaticResource LabelSaleTotalStyle}"/>
+                
+                <Label Text="{Binding TotalValueEdit.Text}" 
+                       Style="{StaticResource LabelSaleTotalMoneyStyle}"/>
+                
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <Button x:Name="btn_Saleconclude"
+                        Command="{Binding SaleConcludeEdit}"
+                        Style="{StaticResource BtnMainStyle}"/>
+            
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
