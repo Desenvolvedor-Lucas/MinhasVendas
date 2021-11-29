@@ -16,17 +16,10 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <StackLayout Orientation="Horizontal" 
-                                                 VerticalOptions="CenterAndExpand"
-                                                 HorizontalOptions="CenterAndExpand">
-                                        <Label Text="{x:Static Translate:AppResources.Customer }"
-                                                   Style="{StaticResource LabelDetailStyle}"
-                                                   HorizontalOptions="Center"
-                                                   VerticalOptions="Center"/>
+                                    <StackLayout VerticalOptions="CenterAndExpand">
                                         <Label Text="{Binding CustomerName}"
-                                                   Style="{StaticResource LabelDetailStyle}"
-                                                   HorizontalOptions="Center"
-                                                   VerticalOptions="Center"/>
+                                               Style="{StaticResource LabelDetailStyle}"
+                                               VerticalOptions="Center"/>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>

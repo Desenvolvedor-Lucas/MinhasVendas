@@ -70,11 +70,29 @@ namespace MinhasVendas.ABC_Translate {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Add Product.
+        /// </summary>
+        internal static string Add_Product {
+            get {
+                return ResourceManager.GetString("Add Product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Add this customer to the sale?.
         /// </summary>
         internal static string Add_this_customer_to_the_sale {
             get {
                 return ResourceManager.GetString("Add this customer to the sale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Add this product to the sale?.
+        /// </summary>
+        internal static string Add_this_product_to_the_sale {
+            get {
+                return ResourceManager.GetString("Add this product to the sale", resourceCulture);
             }
         }
         
@@ -214,6 +232,15 @@ namespace MinhasVendas.ABC_Translate {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Details of Product.
+        /// </summary>
+        internal static string Details_of_Product {
+            get {
+                return ResourceManager.GetString("Details of Product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Do you really want to delete this customer?.
         /// </summary>
         internal static string Do_you_really_want_to_delete_this_customer {
@@ -255,6 +282,15 @@ namespace MinhasVendas.ABC_Translate {
         internal static string Edit_Customer {
             get {
                 return ResourceManager.GetString("Edit Customer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Edit Product.
+        /// </summary>
+        internal static string Edit_Product {
+            get {
+                return ResourceManager.GetString("Edit Product", resourceCulture);
             }
         }
         
@@ -435,6 +471,15 @@ namespace MinhasVendas.ABC_Translate {
         internal static string New_Customer {
             get {
                 return ResourceManager.GetString("New Customer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a New Product.
+        /// </summary>
+        internal static string New_Product {
+            get {
+                return ResourceManager.GetString("New Product", resourceCulture);
             }
         }
         
@@ -658,6 +703,15 @@ namespace MinhasVendas.ABC_Translate {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Products.
+        /// </summary>
+        internal static string Products {
+            get {
+                return ResourceManager.GetString("Products", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Sale.
         /// </summary>
         internal static string Sale {
@@ -789,6 +843,15 @@ namespace MinhasVendas.ABC_Translate {
         internal static string Units {
             get {
                 return ResourceManager.GetString("Units", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Unknown.
+        /// </summary>
+        internal static string Unknown {
+            get {
+                return ResourceManager.GetString("Unknown", resourceCulture);
             }
         }
         

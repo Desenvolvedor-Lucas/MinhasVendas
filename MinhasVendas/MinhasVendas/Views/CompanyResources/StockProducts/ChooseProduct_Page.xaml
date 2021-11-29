@@ -1,43 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:Translate="clr-namespace:MinhasVendas.ABC_Translate"
-             x:Class="MinhasVendas.Views.CompanyResources.Customers.ChooseClient_Page"
-             Style="{x:StaticResource BackgoundContent}">
-    
+             x:Class="MinhasVendas.Views.CompanyResources.StockProducts.ChooseProduct_Page"
+             Style="{StaticResource BackgoundContent}">
     <ContentPage.Content>
         <StackLayout Margin="10">
-
             <StackLayout Margin="10">
-                <Button x:Name="btn_Anonymous"
-                        Command="{Binding Anonymous}"
+                <Button x:Name="btn_Unknown"
+                        Command="{Binding UnknownCommand}"
                         Style="{x:StaticResource BtnMainStyle}"/>
             </StackLayout>
 
             <Frame Style="{x:StaticResource FrameCashStyle}">
                 <StackLayout>
-                    
-                    <ListView ItemsSource="{Binding ChooseCustomersList}"
+
+                    <ListView ItemsSource="{Binding ChooseProductList}"
                               ItemTapped="ListView_ItemTapped"
                               SelectionMode="None"
                               SeparatorVisibility="Default">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <StackLayout>
-                                        <Label Text="{Binding CustomerName}"
+                                    <StackLayout Orientation="Horizontal" 
+                                                 HorizontalOptions="CenterAndExpand"
+                                                 VerticalOptions="Center">
+                                        <Label Text="{Binding ProductName}"
                                                Style="{x:StaticResource LabelDetailStyle}"
-                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"/>
+                                        <Label Text=" = "
+                                               Style="{x:StaticResource LabelDetailStyle}"
+                                               VerticalOptions="Center"/>
+                                        <Label Text="{Binding ProductMoney}"
+                                               Style="{x:StaticResource LabelDetailStyle}"
                                                VerticalOptions="Center"/>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                    
+
                 </StackLayout>
             </Frame>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

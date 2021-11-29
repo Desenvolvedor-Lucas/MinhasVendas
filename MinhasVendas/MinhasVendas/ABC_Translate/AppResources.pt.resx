@@ -120,8 +120,14 @@
   <data name="Add customer" xml:space="preserve">
     <value>Adicionar cliente</value>
   </data>
+  <data name="Add Product" xml:space="preserve">
+    <value>Adicionar Produto</value>
+  </data>
   <data name="Add this customer to the sale" xml:space="preserve">
     <value>Adicionar este cliente na venda?</value>
+  </data>
+  <data name="Add this product to the sale" xml:space="preserve">
+    <value>Adicionar este produto na venda?</value>
   </data>
   <data name="All empty" xml:space="preserve">
     <value>Todos vazios</value>
@@ -168,6 +174,9 @@
   <data name="Details of Customer" xml:space="preserve">
     <value>Detalhes do cliente</value>
   </data>
+  <data name="Details of Product" xml:space="preserve">
+    <value>Detalhes do Produto</value>
+  </data>
   <data name="Do you really want to delete this customer" xml:space="preserve">
     <value>Você realmente deseja deletar este cliente?</value>
   </data>
@@ -182,6 +191,9 @@
   </data>
   <data name="Edit Customer" xml:space="preserve">
     <value>Editar cliente</value>
+  </data>
+  <data name="Edit Product" xml:space="preserve">
+    <value>Editar Produto</value>
   </data>
   <data name="Edit Theme" xml:space="preserve">
     <value>Editar Tema</value>
@@ -242,6 +254,9 @@
   </data>
   <data name="New Customer" xml:space="preserve">
     <value>Novo Cliente</value>
+  </data>
+  <data name="New Product" xml:space="preserve">
+    <value>Novo Produto</value>
   </data>
   <data name="New Sale" xml:space="preserve">
     <value>Nova Venda</value>
@@ -315,6 +330,9 @@
   <data name="Product, Unit and Value empty" xml:space="preserve">
     <value>Produto, Unidade e Valor vazios</value>
   </data>
+  <data name="Products" xml:space="preserve">
+    <value>Produtos</value>
+  </data>
   <data name="Sale" xml:space="preserve">
     <value>Venda</value>
   </data>
@@ -359,6 +377,9 @@
   </data>
   <data name="Units" xml:space="preserve">
     <value>Unidades</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Desconhecido</value>
   </data>
   <data name="User" xml:space="preserve">
     <value>Perfil</value>

@@ -37,3 +37,6 @@ E:\Dev Lucas\Mobile\Xamarin\MinhasVendas\MinhasVendas\MinhasVendas\obj\Debug\net
 E:\Dev Lucas\Mobile\Xamarin\MinhasVendas\MinhasVendas\MinhasVendas\obj\Debug\netstandard2.0\Views\CompanyResources\Earnings\Earnings_Page.xaml.g.cs
 E:\Dev Lucas\Mobile\Xamarin\MinhasVendas\MinhasVendas\MinhasVendas\obj\Debug\netstandard2.0\Views\CompanyResources\StockProducts\StockProducts_Page.xaml.g.cs
 E:\Dev Lucas\Mobile\Xamarin\MinhasVendas\MinhasVendas\MinhasVendas\obj\Debug\netstandard2.0\Views\CompanyResources\Customers\ChooseClient_Page.xaml.g.cs
+E:\Dev Lucas\Mobile\Xamarin\MinhasVendas\MinhasVendas\MinhasVendas\obj\Debug\netstandard2.0\Views\CompanyResources\StockProducts\ChooseProduct_Page.xaml.g.cs
+E:\Dev Lucas\Mobile\Xamarin\MinhasVendas\MinhasVendas\MinhasVendas\obj\Debug\netstandard2.0\Views\CompanyResources\StockProducts\AddProducts_Page.xaml.g.cs
+E:\Dev Lucas\Mobile\Xamarin\MinhasVendas\MinhasVendas\MinhasVendas\obj\Debug\netstandard2.0\Views\CompanyResources\StockProducts\Products_DetailPage.xaml.g.cs

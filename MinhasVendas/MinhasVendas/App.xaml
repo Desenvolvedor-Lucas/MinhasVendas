@@ -44,7 +44,7 @@
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
             </Style>
 
-                <!--Buttons-->
+            <!--Buttons-->
             <!--Btn Main-->
             <Style x:Key="BtnMainStyle" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryDarkColor}"/>

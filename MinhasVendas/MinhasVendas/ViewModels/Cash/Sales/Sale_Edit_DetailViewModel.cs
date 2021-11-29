@@ -8,10 +8,13 @@ using System.Globalization;
 using System.Threading.Tasks;
 using MinhasVendas.Views.Cash;
 using MinhasVendas.Views.CompanyResources.Customers;
+using MinhasVendas.Views.CompanyResources.StockProducts;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace MinhasVendas.ViewModels.Cash.Sales
 {
-    public class Sale_Edit_DetailViewModel
+    public class Sale_Edit_DetailViewModel : INotifyPropertyChanged
     {
         int index;
 
@@ -20,34 +23,41 @@ namespace MinhasVendas.ViewModels.Cash.Sales
         public Cash_ViewModel Cash_VM { get; set; }
 
         public Label NameEdit { get; set; } = new Label();
-        public string ProductEdit { get; set; }
-        
+        public Label ProductEdit { get; set; } = new Label();
+        public Label ValueMoney { get; set; } = new Label();
 
-        private string _value;
-        public string ValueEdit
+
+
+        private decimal _value;
+        public decimal ValueEdit
         {
             get { return _value; }
             set 
             { 
                 _value = value;
-                if (!string.IsNullOrEmpty(UnitEdit) && !string.IsNullOrEmpty(ValueEdit))
-                    CalculationTotal = int.Parse(UnitEdit) * decimal.Parse(ValueEdit);
-                else
-                    CalculationTotal = 0;
+                //OnPropertyChanged();
+                ValueMoney.Text = ValueEdit.ToString("C");
+                CalculationTotal = UnitEdit * ValueEdit;
             }
         }
 
-        private string _unit;
-        public string UnitEdit
+        //
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        //
+
+        private int _unit;
+        public int UnitEdit
         {
             get { return _unit; }
             set 
             { 
                 _unit = value;
-                if (!string.IsNullOrEmpty(UnitEdit) && !string.IsNullOrEmpty(ValueEdit))
-                    CalculationTotal = int.Parse(UnitEdit) * decimal.Parse(ValueEdit);
-                else
-                    CalculationTotal = 0;
+                CalculationTotal = UnitEdit * ValueEdit;
             }
         }
 
@@ -59,6 +69,7 @@ namespace MinhasVendas.ViewModels.Cash.Sales
         }
 
         public ICommand EditNameCommand { get; set; }
+        public ICommand EditProductCommand { get; set; }
         public ICommand SaleConcludeEdit { get; set; }
         
 
@@ -76,12 +87,17 @@ namespace MinhasVendas.ViewModels.Cash.Sales
                 await App.Current.MainPage.Navigation.PushAsync(new ChooseClient_Page(this));
             });
 
+            EditProductCommand = new Command(async () => 
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new ChooseProduct_Page(this));
+            });
+
             SaleConcludeEdit = new Command(async () =>
             {
                 var Check = new CheckSale(NameEdit.Text,
-                        ProductEdit,
-                        int.Parse(UnitEdit),
-                        decimal.Parse(ValueEdit));
+                        ProductEdit.Text,
+                        UnitEdit,
+                        ValueEdit);
 
                 int NumberCheck = Check.Verification();
                 bool check = Check.AlertsVerification(NumberCheck);
@@ -105,9 +121,9 @@ namespace MinhasVendas.ViewModels.Cash.Sales
             var item = Cash_VM.SaleList[i];
 
             NameEdit.Text = item.Name;
-            ProductEdit = item.Product;
-            ValueEdit = item.Value.ToString();
-            UnitEdit = item.Unit.ToString();
+            ProductEdit.Text = item.Product;
+            ValueEdit = item.Value;
+            UnitEdit = item.Unit;
 
         }
 
@@ -119,9 +135,9 @@ namespace MinhasVendas.ViewModels.Cash.Sales
             product.Name = NameEdit.Text;
             product.DateSale = Cash_VM.Date.Text;
 
-            product.Product = ProductEdit;
-            product.Value = decimal.Parse(ValueEdit);
-            product.Unit = int.Parse(UnitEdit);
+            product.Product = ProductEdit.Text;
+            product.Value = ValueEdit;
+            product.Unit = UnitEdit;
 
             product.TotalValueProduct = CalculationTotal;
 
@@ -135,6 +151,11 @@ namespace MinhasVendas.ViewModels.Cash.Sales
         public void ChooseName(string name)
         {
             NameEdit.Text = name;
+        }
+        public void ChooseProduct(string product, decimal value)
+        {
+            ProductEdit.Text = product;
+            ValueEdit = value;
         }
     }
 }

@@ -10,13 +10,11 @@ namespace MinhasVendas.ViewModels.CompanyResources.Customers
 {
     public class AddCustomers_ViewModel
     {
-        Customers_ViewModel customers_VM;
         public string Name { get; set; }
         public ICommand AddCustomer { get; set; }
 
         public AddCustomers_ViewModel(Customers_ViewModel customers)
         {
-            customers_VM = customers;
             AddCustomer = new Command( async() => 
             {
                 if (!string.IsNullOrEmpty(Name))

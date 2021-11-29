@@ -1,6 +1,7 @@
 ﻿using MinhasVendas.ABC_Translate;
 using MinhasVendas.Views.CompanyResources.Customers;
 using MinhasVendas.Views.User;
+using MinhasVendas.Views.User.CompanyResources;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,19 +28,19 @@ namespace MinhasVendas.ViewModels.User
         {
             InicializeUser();
 
-            EditUser = new Command( async() =>
+            EditUser = new Command( async () =>
             {
                 await App.Current.MainPage.Navigation.PushAsync(new UserEdit_Page());
             });
 
-            EditTheme = new Command( async() => 
+            EditTheme = new Command( async () => 
             {
                 await App.Current.MainPage.Navigation.PushAsync(new UserEditTheme_Page());
             });
 
-            StockProducts = new Command(/*async */() => 
+            StockProducts = new Command( async () => 
             {
-                //await App.Current.MainPage.Navigation.PushAsync(new StockProducts_Page());
+                await App.Current.MainPage.Navigation.PushAsync(new StockProducts_Page());
             });
 
             Earnings = new Command(/*async*/ () =>

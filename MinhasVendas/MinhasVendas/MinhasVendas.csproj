@@ -41,6 +41,15 @@
     <EmbeddedResource Update="Views\CompanyResources\Customers\ChooseClient_Page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\CompanyResources\StockProducts\AddProducts_Page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CompanyResources\StockProducts\ChooseProduct_Page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CompanyResources\StockProducts\Products_DetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Notes\Notes_Page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -88,6 +97,9 @@
     </Compile>
     <Compile Update="Views\CompanyResources\Customers\ChooseClient_Page.xaml.cs">
       <DependentUpon>ChooseClient_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CompanyResources\StockProducts\ChooseProduct_Page.xaml.cs">
+      <DependentUpon>ChooseProduct_Page.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

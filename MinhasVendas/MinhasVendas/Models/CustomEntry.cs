@@ -7,7 +7,8 @@ namespace MinhasVendas.Models
 {
     public class CustomEntry : Entry
     {
-        public static readonly BindableProperty IsNumericProperty = BindableProperty.Create("IsNumeric", typeof(Boolean), typeof(Entry), false);
+        public static readonly BindableProperty IsNumericProperty = 
+            BindableProperty.Create("IsNumeric", typeof(Boolean), typeof(Entry), false);
 
         public Boolean IsNumeric
         {

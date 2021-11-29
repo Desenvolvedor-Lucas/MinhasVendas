@@ -32,7 +32,7 @@ namespace MinhasVendas.Droid
 
             var isNumeric = element.IsNumeric;
 
-            if(element.Text != null)
+            if (element.Text != null)
             {
                 for (int i = 0; i < element.Text.Length; i++)
                 {

@@ -120,8 +120,14 @@
   <data name="Add customer" xml:space="preserve">
     <value>Add customer</value>
   </data>
+  <data name="Add Product" xml:space="preserve">
+    <value>Add Product</value>
+  </data>
   <data name="Add this customer to the sale" xml:space="preserve">
     <value>Add this customer to the sale?</value>
+  </data>
+  <data name="Add this product to the sale" xml:space="preserve">
+    <value>Add this product to the sale?</value>
   </data>
   <data name="All empty" xml:space="preserve">
     <value>All empty</value>
@@ -168,6 +174,9 @@
   <data name="Details of Customer" xml:space="preserve">
     <value>Details of Customer</value>
   </data>
+  <data name="Details of Product" xml:space="preserve">
+    <value>Details of Product</value>
+  </data>
   <data name="Do you really want to delete this customer" xml:space="preserve">
     <value>Do you really want to delete this customer?</value>
   </data>
@@ -182,6 +191,9 @@
   </data>
   <data name="Edit Customer" xml:space="preserve">
     <value>Edit Customer</value>
+  </data>
+  <data name="Edit Product" xml:space="preserve">
+    <value>Edit Product</value>
   </data>
   <data name="Edit Theme" xml:space="preserve">
     <value>Edit Theme</value>
@@ -242,6 +254,9 @@
   </data>
   <data name="New Customer" xml:space="preserve">
     <value>New Customer</value>
+  </data>
+  <data name="New Product" xml:space="preserve">
+    <value>New Product</value>
   </data>
   <data name="New Sale" xml:space="preserve">
     <value>New Sale</value>
@@ -315,6 +330,9 @@
   <data name="Product, Unit and Value empty" xml:space="preserve">
     <value>Product, Unit and Value empty</value>
   </data>
+  <data name="Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
   <data name="Sale" xml:space="preserve">
     <value>Sale</value>
   </data>
@@ -359,6 +377,9 @@
   </data>
   <data name="Units" xml:space="preserve">
     <value>Units</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
   </data>
   <data name="User" xml:space="preserve">
     <value>User</value>

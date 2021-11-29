@@ -15,13 +15,6 @@ namespace MinhasVendas.ViewModels.CompanyResources.Customers
 
         public ICommand ExcludeCommand { get; set; }
 
-        //De pouco em pouco esta indo, veja o app e continue melhorando
-        //falta terminar as algumas das coisas do /customer(s)
-        //outras coisa a fazer depois é o Sale e EditSale DB na parte do
-        //estoque de produtos como fiz com o nome do cliente
-        //mais antes é preciso arrumar as entradas de valor e unidade do produto,
-        //arrumar bugs e melhorar para o usuário na questão do valor e unidade.
-
         public Customer_DetailViewModel(Customer customer)
         {
             Customer = customer.CustomerName;

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Model="clr-namespace:MinhasVendas.Models"
+             x:Class="MinhasVendas.Views.CompanyResources.StockProducts.AddProducts_Page"
+             Style="{StaticResource BackgoundContent}">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Frame Style="{x:StaticResource FrameSaleStyle}" VerticalOptions="CenterAndExpand">
+                <StackLayout Margin="10">
+                    <Label x:Name="lbl_Product"
+                           Style="{x:StaticResource LabelSaleInformationsStyle}"
+                           HorizontalOptions="Center"/>
+
+                    <Entry x:Name="entry_Product"
+                            Text="{Binding Product}"
+                            Style="{x:StaticResource EntryItemSale}"
+                            HorizontalTextAlignment="Center"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        
+                        <Label x:Name="lbl_Value"
+                           Style="{x:StaticResource LabelSaleInformationsStyle}"
+                           HorizontalOptions="Center"/>
+
+                        <Label Text="{Binding ValueMoney.Text}"
+                               Style="{x:StaticResource LabelMoneyStyle}"
+                               VerticalOptions="End"/>
+
+                    </StackLayout>
+
+                    <Model:CustomEntry x:Name="entry_Value"
+                                       Text="{Binding Value}" 
+                                       Style="{x:StaticResource EntryItemSale}"
+                                       HorizontalTextAlignment="Center"
+                                       IsNumeric="True"/>
+
+                    <StackLayout Margin="10">
+                        <Button x:Name="btn_Add_Product"
+                                Command="{Binding AddProductCommand}"
+                                Style="{x:StaticResource BtnMainStyle}"
+                                VerticalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

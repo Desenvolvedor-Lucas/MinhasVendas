@@ -6,9 +6,38 @@
              Style="{StaticResource BackgoundContent}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Stock Products"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame Margin="10" Style="{StaticResource FrameCashStyle}">
+                <ListView ItemsSource="{Binding ListProducts}"
+                          ItemTapped="ListView_ItemTapped"
+                          SelectionMode="None"
+                          SeparatorVisibility="Default">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="Center">
+                                    <Label Text="{Binding ProductName}"
+                                           Style="{StaticResource LabelDetailStyle}"
+                                           VerticalOptions="Center"/>
+                                    <Label Text=" = "
+                                           Style="{StaticResource LabelDetailStyle}"
+                                           VerticalOptions="Center"/>
+                                    <Label Text="{Binding ProductMoney}"
+                                           Style="{StaticResource LabelDetailStyle}"
+                                           VerticalOptions="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
+
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="10">
+                <Button x:Name="btn_NewProduct"
+                        Command="{Binding NewProductCommand}"
+                        Style="{StaticResource BtnMainStyle}"
+                        VerticalOptions="End"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

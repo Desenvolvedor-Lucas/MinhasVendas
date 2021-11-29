@@ -53,7 +53,7 @@ namespace MinhasVendas.Views.Cash.Sales
             this.entry_Name.Placeholder = $"{AppResources.Enter_the_customers_name}";
             this.entry_Product.Placeholder = $"{AppResources.Enter_the_product_name}";
             this.entry_Value.Placeholder = $"{AppResources.Enter_the_value}";
-            this.entry_Unit.Placeholder = $"{AppResources.Enter_the_quantity_of_product}";
+            //this.entry_Unit.Placeholder = $"{AppResources.Enter_the_quantity_of_product}";
         }
 
     }

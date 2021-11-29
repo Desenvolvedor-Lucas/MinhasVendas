@@ -9,6 +9,7 @@ namespace MinhasVendas
 {
     public partial class App : Application
     {
+        //Banco de dados das vendas
         static SaleDataBase saledatabase;
         public static SaleDataBase SaleDatabase
         {
@@ -23,6 +24,7 @@ namespace MinhasVendas
             }
         }
 
+        //Banco de dados dos clientes
         static CustomersDataBase customersdatabase;
         public static CustomersDataBase CustomersDataBase
         {
@@ -34,6 +36,21 @@ namespace MinhasVendas
                         "CustomersData.db3"));
                 }
                 return customersdatabase;
+            }
+        }
+
+        //Banco de dados dos produtos
+        static ProductsDataBase productsdatabase;
+        public static ProductsDataBase ProductsDataBase
+        {
+            get
+            {
+                if (productsdatabase == null)
+                {
+                    productsdatabase = new ProductsDataBase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        "ProductsData.db3"));
+                }
+                return productsdatabase;
             }
         }
 
