@@ -19,7 +19,7 @@ namespace MinhasVendas.ABC_Translate {
     // através de uma ferramenta como ResGen ou Visual Studio.
     // Para adicionar ou remover um associado, edite o arquivo .ResX e execute ResGen novamente
     // com a opção /str, ou recrie o projeto do VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResources {
@@ -133,11 +133,29 @@ namespace MinhasVendas.ABC_Translate {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a camera.
+        /// </summary>
+        internal static string camera {
+            get {
+                return ResourceManager.GetString("camera", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cash.
         /// </summary>
         internal static string Cash {
             get {
                 return ResourceManager.GetString("Cash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Choose the way you want to change the photo.
+        /// </summary>
+        internal static string Choose_the_way_you_want_to_change_the_photo {
+            get {
+                return ResourceManager.GetString("Choose the way you want to change the photo", resourceCulture);
             }
         }
         
@@ -201,6 +219,15 @@ namespace MinhasVendas.ABC_Translate {
         internal static string Default_theme {
             get {
                 return ResourceManager.GetString("Default theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Description.
+        /// </summary>
+        internal static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
             }
         }
         
@@ -286,6 +313,24 @@ namespace MinhasVendas.ABC_Translate {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Edit Image.
+        /// </summary>
+        internal static string Edit_Image {
+            get {
+                return ResourceManager.GetString("Edit Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Edit Photo.
+        /// </summary>
+        internal static string Edit_Photo {
+            get {
+                return ResourceManager.GetString("Edit Photo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Edit Product.
         /// </summary>
         internal static string Edit_Product {
@@ -363,6 +408,15 @@ namespace MinhasVendas.ABC_Translate {
         internal static string Fire_theme {
             get {
                 return ResourceManager.GetString("Fire theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a gallery.
+        /// </summary>
+        internal static string gallery {
+            get {
+                return ResourceManager.GetString("gallery", resourceCulture);
             }
         }
         
@@ -502,6 +556,15 @@ namespace MinhasVendas.ABC_Translate {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a No camera detected.
+        /// </summary>
+        internal static string No_camera_detected {
+            get {
+                return ResourceManager.GetString("No camera detected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Notes.
         /// </summary>
         internal static string Notes {
@@ -516,6 +579,24 @@ namespace MinhasVendas.ABC_Translate {
         internal static string Ok {
             get {
                 return ResourceManager.GetString("Ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Oops.
+        /// </summary>
+        internal static string Oops {
+            get {
+                return ResourceManager.GetString("Oops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Photo gallery not supported.
+        /// </summary>
+        internal static string Photo_gallery_not_supported {
+            get {
+                return ResourceManager.GetString("Photo gallery not supported", resourceCulture);
             }
         }
         
@@ -762,6 +843,15 @@ namespace MinhasVendas.ABC_Translate {
         internal static string Sale_Information {
             get {
                 return ResourceManager.GetString("Sale Information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Save Profile.
+        /// </summary>
+        internal static string Save_Profile {
+            get {
+                return ResourceManager.GetString("Save Profile", resourceCulture);
             }
         }
         

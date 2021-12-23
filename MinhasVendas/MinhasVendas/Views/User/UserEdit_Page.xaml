@@ -5,10 +5,58 @@
              x:Class="MinhasVendas.Views.User.UserEdit_Page"
              Style="{StaticResource BackgoundContent}">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to User Edit"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+
+                <Frame Style="{StaticResource FrameUserStyle}">
+                    <StackLayout>
+                        <Image x:Name="Image" 
+                               HeightRequest="150" WidthRequest="150"
+                               MinimumHeightRequest="150"
+                               MinimumWidthRequest="150"
+                               Aspect="AspectFit"/>
+                        
+                            <Button x:Name="btn_Edit_Image"
+                                    Command="{Binding EditPhoto}"
+                                    Style="{StaticResource BtnItemSaleStyle}"
+                                    HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout VerticalOptions="CenterAndExpand">
+
+                    <Label x:Name="lbl_Name"
+                           Style="{StaticResource LabelSaleInformationsStyle}"
+                           HorizontalOptions="Center"
+                           Margin="10"/>
+
+                    <Entry x:Name="Name"
+                           Text="{Binding Name.Text}"
+                           Style="{StaticResource EntryItemSale}"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+
+                    <Label x:Name="lbl_Description"
+                           Style="{StaticResource LabelSaleInformationsStyle}"
+                           HorizontalOptions="Center"
+                           Margin="10"/>
+                    
+                    <Entry x:Name="Description"
+                           Text="{Binding Description.Text}"
+                           Style="{StaticResource EntryItemSale}"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="FillAndExpand"/>
+                    
+                </StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    
+                    <Button x:Name="btn_Save_Profile"
+                            Command="{Binding SaveProfileCommand}"
+                            Style="{StaticResource BtnMainStyle}"
+                            Margin="10"/>
+                    
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

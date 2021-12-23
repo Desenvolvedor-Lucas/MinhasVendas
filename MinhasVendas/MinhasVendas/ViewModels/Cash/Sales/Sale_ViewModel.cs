@@ -31,6 +31,7 @@ namespace MinhasVendas.ViewModels.Cash.Sales
                 CalculationTotal = Unit * Value;
                 ValueMoney.Text = Value.ToString("C");
                 //erro da vircula acontece quando chega no OnPropertyChanged, falta arrumar
+                //Acho que nem precisa de OnPropertyChanged, sei lá
             }
         }
 

@@ -5,6 +5,7 @@ using MinhasVendas.Views.User.CompanyResources;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -12,10 +13,9 @@ namespace MinhasVendas.ViewModels.User
 {
     public class User_ViewModel
     {
-
-        public string srcImgUser { get; set; }
-        public string Company_Name { get; set; }
-        public string Company_Description { get; set; }
+        public Label srcImgUser { get; set; } = new Label();
+        public Label Company_Name { get; set; } = new Label();
+        public Label Company_Description { get; set; } = new Label();
 
         public ICommand EditUser { get; set; }
         public ICommand EditTheme { get; set; }
@@ -26,7 +26,8 @@ namespace MinhasVendas.ViewModels.User
 
         public User_ViewModel()
         {
-            InicializeUser();
+            var Inicialize = new UserConfig(this);
+            UserConfig.DefineAsync();
 
             EditUser = new Command( async () =>
             {
@@ -54,12 +55,47 @@ namespace MinhasVendas.ViewModels.User
             });
         }
 
-        void InicializeUser()
+
+        public void DefineUser(string path, string name, string description)
         {
-            //Get image of MinhasVendas.Android/Resources/drawable
-            srcImgUser = "User_Off.png";
-            Company_Name = $"{AppResources.Name_of_my_company}";
-            Company_Description = $"{AppResources.Description_of_my_company}";
+            srcImgUser.Text = path;
+            Company_Name.Text = name;
+            Company_Description.Text = description;
+        }
+
+    }
+
+    public class UserConfig 
+    {
+        static User_ViewModel User_vm;
+        public static Label LocalImage { get; set; } = new Label();
+        public static Label Name { get; set; } = new Label();
+        public static Label Description { get; set; } = new Label();
+
+        public UserConfig(User_ViewModel VM)
+        {
+            User_vm = VM;
+        }
+
+        public async static void DefineAsync()
+        {
+            var list = await App.CompanyDataBase.Get_DB_Company_Async();
+            if (list.Count == 1)
+            {
+                var company = list[0];
+                LocalImage.Text = company.PathFile;
+                Name.Text = company.CompanyName;
+                Description.Text = company.CompanyDescription;
+            }
+            else
+            {
+                LocalImage.Text = "User_Off.png";
+                Name.Text = $"{AppResources.Name_of_my_company}";
+                Description.Text = $"{AppResources.Description_of_my_company}";
+            }
+
+            User_vm.DefineUser(LocalImage.Text, Name.Text, Description.Text);
         }
     }
+
 }

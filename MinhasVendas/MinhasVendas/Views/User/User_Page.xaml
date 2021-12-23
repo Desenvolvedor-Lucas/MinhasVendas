@@ -11,7 +11,11 @@
                              HorizontalOptions="FillAndExpand">
 
                     <StackLayout>
-                        <Image Source="{Binding srcImgUser}"/>
+                        <Image Source="{Binding srcImgUser.Text}"
+                               HeightRequest="150" WidthRequest="150"
+                               MinimumHeightRequest="150"
+                               MinimumWidthRequest="150"
+                               Aspect="AspectFit"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Vertical" 
@@ -22,17 +26,17 @@
                         <StackLayout Orientation="Horizontal"
                                      HorizontalOptions="FillAndExpand">
 
-                            <Label Text="{Binding Company_Name}" 
+                            <Label Text="{Binding Company_Name.Text}" 
                                    Style="{StaticResource LabelUserNameCompanyStyle}"/>
-
-                            <Button x:Name="btn_Edit_User"
-                                    Command="{Binding EditUser}"
-                                    Style="{StaticResource BtnUserEditStyle}"/>
 
                         </StackLayout>
 
-                        <Label Text="{Binding Company_Description}"
+                        <Label Text="{Binding Company_Description.Text}"
                                Style="{StaticResource LabelUserDescriptionCompanyStyle}"/>
+
+                        <Button x:Name="btn_Edit_User"
+                                Command="{Binding EditUser}"
+                                Style="{StaticResource BtnUserEditStyle}"/>
 
                     </StackLayout>
 

@@ -54,7 +54,22 @@ namespace MinhasVendas
             }
         }
 
-        //Acho que o básico, essencial do (cash) já foi, agora começar a ver o (notes ou user)
+        //Banco de dados da empresa
+        static CompanyDataBase companydatabase;
+        public static CompanyDataBase CompanyDataBase
+        {
+            get
+            {
+                if (companydatabase == null)
+                {
+                    companydatabase = new CompanyDataBase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        "CompanyData.db3"));
+                }
+                return companydatabase;
+            }
+        }
+
+        //continuar a fazer o EditUser, imagem, banco de dados, nome e descrição. essas coisas
         public App()
         {
             InitializeComponent();

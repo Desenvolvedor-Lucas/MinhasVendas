@@ -141,8 +141,14 @@
   <data name="Attention" xml:space="preserve">
     <value>Atenção</value>
   </data>
+  <data name="camera" xml:space="preserve">
+    <value>câmera</value>
+  </data>
   <data name="Cash" xml:space="preserve">
     <value>Caixa</value>
+  </data>
+  <data name="Choose the way you want to change the photo" xml:space="preserve">
+    <value>Escolha a forma que deseja mudar a foto</value>
   </data>
   <data name="Choose theme" xml:space="preserve">
     <value>Escolher tema</value>
@@ -164,6 +170,9 @@
   </data>
   <data name="Default theme" xml:space="preserve">
     <value>Tema padrão</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrição</value>
   </data>
   <data name="Description of my company" xml:space="preserve">
     <value>Descrição da minha empresa se encontra aqui mesmo</value>
@@ -192,6 +201,12 @@
   <data name="Edit Customer" xml:space="preserve">
     <value>Editar cliente</value>
   </data>
+  <data name="Edit Image" xml:space="preserve">
+    <value>Editar Imagem</value>
+  </data>
+  <data name="Edit Photo" xml:space="preserve">
+    <value>Editar Foto</value>
+  </data>
   <data name="Edit Product" xml:space="preserve">
     <value>Editar Produto</value>
   </data>
@@ -218,6 +233,9 @@
   </data>
   <data name="Fire theme" xml:space="preserve">
     <value>Tema Fogo</value>
+  </data>
+  <data name="gallery" xml:space="preserve">
+    <value>galeria</value>
   </data>
   <data name="Lemon theme" xml:space="preserve">
     <value>Tema Limão</value>
@@ -264,11 +282,20 @@
   <data name="No" xml:space="preserve">
     <value>Não</value>
   </data>
+  <data name="No camera detected" xml:space="preserve">
+    <value>Nenhuma câmera detectada</value>
+  </data>
   <data name="Notes" xml:space="preserve">
     <value>Notas</value>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>Ok</value>
+  </data>
+  <data name="Oops" xml:space="preserve">
+    <value>Ops</value>
+  </data>
+  <data name="Photo gallery not supported" xml:space="preserve">
+    <value>Galeria de fotos não suportada</value>
   </data>
   <data name="Please check if you have added something at the entrance of the units" xml:space="preserve">
     <value>Verifique se você adicionou algo na entrada das unidades!</value>
@@ -350,6 +377,9 @@
   </data>
   <data name="Sale Information" xml:space="preserve">
     <value>Informações da venda</value>
+  </data>
+  <data name="Save Profile" xml:space="preserve">
+    <value>Salvar Perfil</value>
   </data>
   <data name="Shopped" xml:space="preserve">
     <value>Comprou</value>
